@@ -1,5 +1,5 @@
 enableSecurityManager: false # Not needed when running the standalone application
-enableInputThread: true # To make "gradle run" work properly
+enableInputThread: false # To make "gradle run" work properly
 contentMd5: true
 cache:
   cachedFilesExpiry: 86400
