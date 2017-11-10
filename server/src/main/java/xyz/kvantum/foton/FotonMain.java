@@ -26,7 +26,7 @@ public class FotonMain
         } else
         {
             homePath = System.getenv( HOME_KEY );
-            if ( SystemUtils.IS_OS_UNIX && !homePath.startsWith( "/" ) )
+            if ( SystemUtils.IS_OS_UNIX && ( !homePath.startsWith( "/" ) ) )
             {
                 homePath = "/" + homePath;
             }

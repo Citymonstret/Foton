@@ -1,4 +1,10 @@
 views:
+  scripts:
+    filter: assets/[file=index].js
+    options:
+      filePattern: ${file}.js
+      folder: ./public/scripts
+    type: javascript
   std:
     filter: '[file=index].[extension=html]'
     options:
@@ -6,6 +12,7 @@ views:
       folder: ./public
       excludeExtensions:
       - txt
+      - js
       extensionRewrite:
         html: vm
     type: std

@@ -18,6 +18,7 @@
     51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
 -->
+<!DOCTYPE HTML>
 <html>
 <head>
     <title>Hello World!</title>
@@ -26,46 +27,76 @@
         <link rel="$rel" type="$type" href="$href" />
     #end
 
+    #macro(a $href $tooltip $text)
+        <a data-toggle="tooltip" href="$href" title="$tooltip">$text</a>
+    #end
+
     #link("stylesheet" "text/css" "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css")
     #link("stylesheet" "text/css" "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css")
+    #link("stylesheet" "text/css" "main.less")
 
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <meta name="msapplication-config" content="none"/>
-    <script
-            src="https://code.jquery.com/jquery-3.2.1.min.js"
-            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-            crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-            crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="assets/stickyfooter.js" type="application/javascript"></script>
 </head>
 <body>
 <br>
 <div class="container">
     <div class="row">
-        <div class="well">
-            <div class="container">
-                <div class="row">
-                    <h1>Welcome to Kvantum</h1>
-                </div>
-                <div class="row">
-                    This is pretty, isn't it?
-                </div>
+        <div class="container">
+            <div class="row">
+                <h1 align="center">Wεlcοmε to Kvαnτum <hr/></h1>
+            </div>
+            <div class="row">
+                <p align="center">
+                    <img alt="Kvantum" src="https://i.imgur.com/C8QKaSK.png" width="458"/>
+                </p>
+            </div>
+            <div class="row">
+                <h2>What?</h2>
+                <p>
+                    Kvantum is a lightweight, portable and (if you so desire) embeddable (HTTP/HTTPS) web server,
+                    written entirely in java. It is meant to be easy to use, yet offer a wide variety of tools and
+                    utilities to simplify the development of your website. It comes shipped with tools such as account
+                    management, database connectors and template engine support. All to remove the need for repeated boilerplate.
+                </p>
+                <p>
+                    Kvantum can be used both as a standalone application (serving static content), as a library to
+                    create your own applications (by integrating Kvantum or by extending the server using plugins).
+                    It allows views to be configured both through configuration files and through code (and even a mixture of both!).
+                </p>
+                <p>
+                    It supports a wide variety of static file types out of the box, and it even offers support
+                    for Apache Velocity, JTwig and Crush (our own template engine) templates!
+                </p>
+                <h2>More information...</h2>
+                <p>... can be found at #a("https://github.com/IntellectualSites/Kvantum" "Kvantum at GitHub" "GitHub")
+                </p>
             </div>
         </div>
     </div>
 </div>
+<footer>
 <div class="container">
     <div class="row">
-        <div class="well">
-            <div class="container">
-                <div class="row">
-                    Using <a href="https://github.com/IntellectualSites/Kvantum">Kvantum</a>
-                </div>
+        <div class="container">
+            <hr/>
+            <div class="row">
+                #a("https://github.com/IntellectualSites/Foton" "Foton on GitHub" "Foton") served using
+                #a("https://github.com/IntellectualSites/Kvantum" "Kvantum on GitHub" "Kvantum")
             </div>
         </div>
     </div>
 </div>
+</footer>
+<script>
+    $(document).ready(function() {
+        $('a[data-toggle="tooltip"]').tooltip();
+        $("footer").stickyFooter();
+    });
+</script>
 </body>
 </html>

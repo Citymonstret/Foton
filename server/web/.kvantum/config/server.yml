@@ -1,5 +1,5 @@
 enableSecurityManager: false # Not needed when running the standalone application
-enableInputThread: false # To make "gradle run" work properly
+enableInputThread: true # To make "gradle run" work properly
 contentMd5: true
 cache:
   cachedFilesExpiry: 86400
@@ -23,7 +23,7 @@ webAddress: kvantum.xyz
 templates:
   engine: !!com.github.intellectualsites.kvantum.api.config.CoreConfig$TemplatingEngine 'VELOCITY'
   applyTemplates:
-  - ALL
+  - std
 logPrefix: Foton
 gzip: true
 ssl:
