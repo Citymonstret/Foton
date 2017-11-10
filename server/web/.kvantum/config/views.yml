@@ -6,4 +6,6 @@ views:
       folder: ./public
       excludeExtensions:
       - txt
+      extensionRewrite:
+        html: vm
     type: std

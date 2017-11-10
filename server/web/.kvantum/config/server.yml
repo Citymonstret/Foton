@@ -1,5 +1,5 @@
-enableSecurityManager: true
-enableInputThread: true
+enableSecurityManager: false # Not needed when running the standalone application
+enableInputThread: false # To make "gradle run" work properly
 contentMd5: true
 cache:
   cachedFilesExpiry: 86400
@@ -13,26 +13,26 @@ cache:
   cachedSessionsMaxItems: 1000
   cachedAccountIdsMaxItems: 1000
   cachedBodiesExpiry: 3600
-  enabled: true
+  enabled: false # Enable during runtime!
 sessions:
   enableDb: true
   autoLoad: true
   sessionTimeout: 86400
-debug: false
-webAddress: localhost
+debug: true
+webAddress: kvantum.xyz
 templates:
-  engine: !!com.github.intellectualsites.kvantum.api.config.CoreConfig$TemplatingEngine 'CRUSH'
+  engine: !!com.github.intellectualsites.kvantum.api.config.CoreConfig$TemplatingEngine 'VELOCITY'
   applyTemplates:
   - ALL
-logPrefix: Web
+logPrefix: Foton
 gzip: true
 ssl:
   port: 443
   keyStorePassword: password
   enable: false
   keyStore: keyStore
-verbose: false
-hostname: localhost
+verbose: true
+hostname: kvantum.xyz
 enableSyntax: true
 application:
   databaseImplementation: sqlite

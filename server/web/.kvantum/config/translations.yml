@@ -1,3 +1,10 @@
+warning:
+  invalid_view: 'Invalid view (''%s'') - - Constructor has to be #(String.class, Map.class)'
+  ssl_not_enough_workers: SSL is enabled. It is recommended to use at least 3 worker threads ( Not Required )
+  application_does_not_extend: Application '%s' does not extend ApplicationStructure.class
+  caching_disabled: Caching is not enabled, this can reduce load times on bigger files!
+  could_not_create_folder: Couldn't create the %s folder
+  caching_enabled: Caching is enabled, beware that this increases memory usage - So keep an eye on it
 debug:
   startup_step: 'Calling Startup Step: ''%s'''
   session_found: Found session (%s=%s) for request %s
@@ -12,13 +19,6 @@ debug:
   request_served_status: 'Request was served with HTTP status: %s'
   cache_file_access: 'Accessing cached file: %s'
   templating_engine_reacting: '%s is reacting to: %s'
-warning:
-  invalid_view: 'Invalid view (''%s'') - - Constructor has to be #(String.class, Map.class)'
-  ssl_not_enough_workers: SSL is enabled. It is recommended to use at least 3 worker threads ( Not Required )
-  application_does_not_extend: Application '%s' does not extend ApplicationStructure.class
-  caching_disabled: Caching is not enabled, this can reduce load times on bigger files!
-  could_not_create_folder: Couldn't create the %s folder
-  caching_enabled: Caching is enabled, beware that this increases memory usage - So keep an eye on it
 error:
   account_admin_failed: Failed to create admin account
   cannot_load_translations: Cannot load the translation file
