@@ -1,0 +1,21 @@
+group 'xyz.kvantum'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'application'
+
+sourceCompatibility = 1.8
+
+mainClassName = 'xyz.kvantum.foton.FotonMain'
+
+repositories {
+    mavenCentral()
+    maven {
+        url 'https://jitpack.io'
+    }
+}
+
+dependencies {
+    compile 'com.github.IntellectualSites.Kvantum:Implementation:73c17069ac'
+}
